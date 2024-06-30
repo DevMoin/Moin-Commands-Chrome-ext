@@ -20,6 +20,7 @@ chrome.runtime.sendMessage({ type: 'init' }, function (response) {
 });
 
 
+
 function log(...msg) {
     console.log("%cMoin Commands", "background: red; color: #bada55");
     console.log(...msg);

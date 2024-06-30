@@ -1,15 +1,15 @@
 import './commands/all.js';
 import './commands/share.js';
 import './commands/links.js';
+import './commands/searchWith.js';
 
-
-addCommand("Tedt", function({reOpenMain}){
-  chrome.runtime.sendMessage({msg: "HELLO"});
+addCommand("Tedt", function ({ reOpenMain }) {
+  chrome.runtime.sendMessage({ msg: "HELLO" });
   let ass = document.querySelectorAll("a");
   let assArr = Array.from(ass);
   Swal.fire({
-      type: 'info',
-      html: `<pre style=""><code>${assArr.map(a=>`[${a.innerText}](${a.href})`).join("\n\n")}</code></pre>`
+    type: 'info',
+    html: `<pre style=""><code>${assArr.map(a => `[${a.innerText}](${a.href})`).join("\n\n")}</code></pre>`
   });
 }, "Basic");
 
