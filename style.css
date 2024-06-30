@@ -1,0 +1,113 @@
+sufi-app,
+sufi-container,
+sufi-button,
+sufi-input,
+sufi-data,
+sufi-command {
+  display: block;
+}
+
+.sufi-frame {
+  border: none;
+}
+
+sufi-container {
+  swidth: 40%;
+  margin: 10px auto;
+  box-shadow: 1px 0px 4px cadetblue;
+  display: none;
+  z-index: 100000000;
+  sposition: fixed;
+  stop: 30%;
+  sleft: 50%;
+  background: white;
+  stransform: translate(-50%, -50%);
+}
+
+sufi-button {
+  position: fixed;
+  background-color: black;
+  border: 1px solid black;
+  overflow: hidden;
+  right: 0;
+  bottom: 10px;
+  cursor: pointer;
+  z-index: 100000000;
+}
+
+sufi-button svg {
+  width: 30px;
+}
+
+sufi-input {
+  border-bottom: 1px solid grey;
+  margin: 10px 0px;
+}
+
+sufi-input input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+}
+
+.sufi-active {
+  display: block;
+}
+
+sufi-data {
+  padding: 10px;
+}
+
+.sufi-span {
+  color: grey;
+  font-size: 13px;
+}
+
+sufi-anchors {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+sufi-anchors sufi-command {
+  text-decoration: none;
+  color: black;
+  margin: 2px 10px;
+  padding: 5px 5px;
+  cursor: pointer;
+  transition: all linear 0.1s;
+}
+
+sufi-anchors sufi-command span {
+  color: red;
+}
+
+sufi-anchors sufi-command.sufi-active {
+  padding-left: 10px;
+  background-color: #fff0db;
+}
+
+.sufi-hidden {
+  display: none;
+}
+
+sufi-command-group-title {
+  text-align: left;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  /* position: sticky; */
+  top: 0;
+  /* background: linear-gradient(45deg, #eec285 15%, #ffe2ba8c, transparent); */
+  padding: 4px;
+  margin-bottom: 10px;
+}
+
+
+sufi-command-group {
+  border-bottom: 1px solid #0000001a;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}

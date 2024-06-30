@@ -1,0 +1,61 @@
+{
+    "name": "Moin commands",
+    "description": "Moin commands",
+    "manifest_version": 3,
+    "version": "3.0.1",
+    "icons": {
+        "256": "images/image-256.png"
+    },
+    "permissions": [
+        "activeTab",
+        "alarms",
+        "system.memory",
+        "bookmarks",
+        "browsingData",
+        "cookies",
+        "contextMenus",
+        "downloads",
+        "history",
+        "notifications",
+        "storage",
+        "tabs",
+        "webNavigation",
+        "webRequest",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "inject.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "inject.html"
+            ],
+            "matches": [
+                "http://192.168.0.1/*"
+            ]
+        },
+        {
+            "resources": [
+                "main.js"
+            ],
+            "matches": [
+                "*://*/*"
+            ]
+        }
+    ]
+}
